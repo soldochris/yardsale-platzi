@@ -25,6 +25,7 @@ body{
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
+  justify-items: center;
 }
 
 .logo{
@@ -49,6 +50,21 @@ body{
   text-align: center;
 }
 
+.email-image{
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: var(--text-input-field);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+
+  & img{
+    width: 80px;
+  }
+}
+
 .form{
   display: flex;
   flex-direction: column;
@@ -70,10 +86,6 @@ body{
   margin-bottom: 12px;
 }
 
-.input-password{
-
-}
-
 .primary-button{
   background-color: var(--hospital-green);
   border: none;
@@ -91,8 +103,22 @@ body{
   margin-bottom: 30px;
 }
 
+.resend{
+  font-size: var(--sm);
+
+  & span {
+    color: var(--very-light-pink);
+  }
+
+  & a{
+    color: var(--hospital-green);
+    text-decoration: none;
+  }
+}
+
 @media (max-width: 640px){
   .logo{
     display: block;
   }
 }
+
