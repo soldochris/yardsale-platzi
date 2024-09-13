@@ -14,12 +14,85 @@ body{
   margin: 0;
 }
 
+nav{
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--very-light-pink);
+  margin-bottom: 8px;
+}
+
+.menu{
+  display: none;
+}
+
+.nav-logo{
+  width: 100px;
+}
+
+.navbar-right ul li:first-child{
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-right: 12px;
+}
+
+.navbar-shopping-cart{
+  position: relative;
+
+  & div{
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.navbar-left{
+  display: flex;
+  & ul{
+    margin-left: 12px;
+  }
+}
+
+.navbar-left ul, .navbar-right ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  & a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  & a:hover{
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+  }
+}
+
 .desktop-menu{
   width: 100px;
   height: auto;
   border: 1px solid var(--very-light-pink);
   border-radius: 6px;
   padding: 20px 20px 0 20px;
+  margin-right: 16px;
+  float: right;
 
   & ul{
     list-style: none;
@@ -255,7 +328,6 @@ body{
   margin-bottom: 40px;
 }
 
-
 .my-order-container{
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -326,7 +398,6 @@ body{
   font-weight: bold;
 }
 
-
 .orders{
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -356,6 +427,23 @@ body{
 }
 
 @media (max-width: 640px){
+
+  .menu{
+    display: block;
+  }
+
+  .navbar-left ul{
+    display: none;
+  }
+
+  .navbar-right ul li:first-child{
+    display: none;
+  }
+
+  .desktop-menu{
+    display: none;
+  }
+
   .logo{
     display: block;
   }
